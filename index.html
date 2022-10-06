@@ -4,7 +4,22 @@
 </head>
 <body>
 <p>this is my project</p>
-
+<div id="copythis">
+    <script>
+        function httpGet(theUrl) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("GET", theUrl, true); // false for synchronous request
+            xmlHttp.send(null);
+    
+            xmlHttp.onreadystatechange = (e) => {
+                if (xmlHttp.readyState==4 && xmlHttp.status==200)
+                {
+                myhit.innerHTML = xmlHttp.responseText;
+                }
+            }
+             
+        }
+        function dohit(img){
 git init
 <br/>
 git add
